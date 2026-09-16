@@ -5,36 +5,36 @@
 <style>
   :root {
     color-scheme: light;
-    --paper: #ece7db;
-    --card: #f8f4ea;
-    --tab: #d9c9a3;
-    --tab-ink: #4a3c1e;
-    --ink: #262218;
-    --ink-muted: #746c58;
-    --rule: #d7cfb9;
-    --stamp: #4c3d78;
-    --stamp-soft: #6a5a9c;
-    --live: #3c7a4e;
-    --live-bg: #dfe9dd;
-    --paused: #9c6a26;
-    --paused-bg: #ece0c8;
-    --shadow: rgba(60, 50, 30, 0.14);
+    --paper: #eaece6;
+    --card: #f6f7f2;
+    --tab: #c9d6c2;
+    --tab-ink: #2d3f28;
+    --ink: #1c2320;
+    --ink-muted: #61695f;
+    --rule: #cfd6c6;
+    --stamp: #2d5f4c;
+    --stamp-soft: #47836a;
+    --live: #2d6e4e;
+    --live-bg: #dcecdf;
+    --paused: #a5631f;
+    --paused-bg: #f0e2cb;
+    --shadow: rgba(30, 45, 35, 0.14);
   }
 
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       color-scheme: dark;
-      --paper: #1b1914;
-      --card: #262319;
-      --tab: #4a3c22;
-      --tab-ink: #e7d6a8;
-      --ink: #ece5d4;
-      --ink-muted: #a89c81;
-      --rule: #3c362a;
-      --stamp: #b6a6e8;
-      --stamp-soft: #8f7ecb;
+      --paper: #14180f;
+      --card: #1f2419;
+      --tab: #3a4a34;
+      --tab-ink: #cfe0c4;
+      --ink: #e5e9dd;
+      --ink-muted: #99a48f;
+      --rule: #313a2a;
+      --stamp: #7fbf9e;
+      --stamp-soft: #5c9d7c;
       --live: #7fd393;
-      --live-bg: #26362a;
+      --live-bg: #263626;
       --paused: #e0ac5c;
       --paused-bg: #3a2f1c;
       --shadow: rgba(0, 0, 0, 0.4);
@@ -43,17 +43,17 @@
 
   :root[data-theme="dark"] {
     color-scheme: dark;
-    --paper: #1b1914;
-    --card: #262319;
-    --tab: #4a3c22;
-    --tab-ink: #e7d6a8;
-    --ink: #ece5d4;
-    --ink-muted: #a89c81;
-    --rule: #3c362a;
-    --stamp: #b6a6e8;
-    --stamp-soft: #8f7ecb;
+    --paper: #14180f;
+    --card: #1f2419;
+    --tab: #3a4a34;
+    --tab-ink: #cfe0c4;
+    --ink: #e5e9dd;
+    --ink-muted: #99a48f;
+    --rule: #313a2a;
+    --stamp: #7fbf9e;
+    --stamp-soft: #5c9d7c;
     --live: #7fd393;
-    --live-bg: #26362a;
+    --live-bg: #263626;
     --paused: #e0ac5c;
     --paused-bg: #3a2f1c;
     --shadow: rgba(0, 0, 0, 0.4);
@@ -124,13 +124,9 @@
   }
 
   .drawer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px 20px;
-  }
-
-  @media (max-width: 620px) {
-    .drawer { grid-template-columns: 1fr; }
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
   }
 
   .card {
@@ -138,11 +134,19 @@
     background: var(--card);
     border: 1px solid var(--rule);
     border-radius: 3px 3px 8px 8px;
-    padding: 22px 20px 20px;
+    padding: 20px 22px;
     box-shadow: 0 10px 22px -14px var(--shadow);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 6px 24px;
+  }
+
+  @media (max-width: 620px) {
+    .card {
+      grid-template-columns: 1fr;
+      padding: 24px 20px 18px;
+    }
   }
 
   .tab {
@@ -160,10 +164,17 @@
     border-radius: 3px 3px 0 0;
   }
 
+  .card-main {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+  }
+
   .card-top {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 2px;
+    align-items: center;
+    gap: 10px;
   }
 
   .status {
@@ -192,7 +203,7 @@
   .card h2 {
     font-family: "Fraunces", Georgia, serif;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin: 0;
     line-height: 1.15;
   }
@@ -202,18 +213,28 @@
     line-height: 1.55;
     color: var(--ink-muted);
     margin: 0;
-    flex: 1;
   }
 
   .card-foot {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding-top: 10px;
-    border-top: 1px dashed var(--rule);
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    text-align: right;
     font-family: "IBM Plex Mono", ui-monospace, monospace;
     font-size: 0.72rem;
+  }
+
+  @media (max-width: 620px) {
+    .card-foot {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--rule);
+    }
   }
 
   .url {
@@ -221,6 +242,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    max-width: 220px;
   }
 
   .card a.go {
@@ -267,11 +289,13 @@
 
     <article class="card">
       <span class="tab">Streamlit</span>
-      <div class="card-top">
-        <span class="status live">En línea</span>
+      <div class="card-main">
+        <div class="card-top">
+          <span class="status live">En línea</span>
+        </div>
+        <h2>Evaluación de Alternativas</h2>
+        <p>Compara opciones de compra a partir de tus propios criterios y arma un ranking automático para decidir más rápido.</p>
       </div>
-      <h2>Evaluación de Alternativas</h2>
-      <p>Compara opciones de compra a partir de tus propios criterios y arma un ranking automático para decidir más rápido.</p>
       <div class="card-foot">
         <span class="url">…leworg.streamlit.app</span>
         <a class="go" href="https://nachomondino1-evaluacion-compra-automatica-my-appinicio-leworg.streamlit.app/" target="_blank" rel="noopener">Ver app →</a>
@@ -280,11 +304,13 @@
 
     <article class="card">
       <span class="tab">Render</span>
-      <div class="card-top">
-        <span class="status live">En línea</span>
+      <div class="card-main">
+        <div class="card-top">
+          <span class="status live">En línea</span>
+        </div>
+        <h2>Alera</h2>
+        <p>App de finanzas personales para ordenar ingresos, gastos y objetivos de ahorro en un solo lugar.</p>
       </div>
-      <h2>Alera</h2>
-      <p>App de finanzas personales para ordenar ingresos, gastos y objetivos de ahorro en un solo lugar.</p>
       <div class="card-foot">
         <span class="url">alerafinanzas.com</span>
         <a class="go" href="https://alerafinanzas.com/" target="_blank" rel="noopener">Ver app →</a>
@@ -293,11 +319,13 @@
 
     <article class="card">
       <span class="tab">GitHub Pages</span>
-      <div class="card-top">
-        <span class="status live">En línea</span>
+      <div class="card-main">
+        <div class="card-top">
+          <span class="status live">En línea</span>
+        </div>
+        <h2>Recomendador de Películas</h2>
+        <p>Sugiere películas a partir de tus gustos, corriendo entero en el navegador.</p>
       </div>
-      <h2>Recomendador de Películas</h2>
-      <p>Sugiere películas a partir de tus gustos, corriendo entero en el navegador.</p>
       <div class="card-foot">
         <span class="url">nachomondino1.github.io</span>
         <a class="go" href="https://nachomondino1.github.io/recommend_movie/" target="_blank" rel="noopener">Ver app →</a>
@@ -306,11 +334,13 @@
 
     <article class="card">
       <span class="tab">GitHub</span>
-      <div class="card-top">
-        <span class="status paused">En pausa</span>
+      <div class="card-main">
+        <div class="card-top">
+          <span class="status paused">En pausa</span>
+        </div>
+        <h2>Predictor de Apuestas</h2>
+        <p>Modelo para predecir resultados deportivos. Vivía en un VPS de Hostinger; por ahora solo queda el código.</p>
       </div>
-      <h2>Predictor de Apuestas</h2>
-      <p>Modelo para predecir resultados deportivos. Vivía en un VPS de Hostinger; por ahora solo queda el código.</p>
       <div class="card-foot">
         <span class="url">github.com/…/predictor-apuestas</span>
         <a class="go" href="https://github.com/nachomondino1/predictor-apuestas" target="_blank" rel="noopener">Ver repositorio →</a>
