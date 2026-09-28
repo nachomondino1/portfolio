@@ -8,14 +8,34 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    try {
+      if (localStorage.getItem("ficheroLang") === "en") document.documentElement.setAttribute("lang", "en");
+    } catch (e) {}
+  </script>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <p class="eyebrow">Fichero &middot; Nacho Mondino</p>
-      <h1>Proyectos en el cajón</h1>
-      <p>Índice de las apps y modelos que fui armando, con dónde viven y cómo están hoy.</p>
-      <div class="index-line">4 fichas</div>
+      <div class="header-top">
+        <p class="eyebrow">Fichero &middot; Nacho Mondino</p>
+        <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+          <button type="button" data-lang-btn="es">ES</button>
+          <button type="button" data-lang-btn="en">EN</button>
+        </div>
+      </div>
+      <h1>
+        <span data-lang="es">Proyectos en el cajón</span>
+        <span data-lang="en" hidden>Projects in the drawer</span>
+      </h1>
+      <p>
+        <span data-lang="es">Índice de las apps y modelos que fui armando, con dónde viven y cómo están hoy.</span>
+        <span data-lang="en" hidden>Index of the apps and models I've built — where they live and how they're doing today.</span>
+      </p>
+      <div class="index-line">
+        <span data-lang="es">4 fichas</span>
+        <span data-lang="en" hidden>4 entries</span>
+      </div>
     </header>
 
     <div class="drawer">
@@ -24,16 +44,40 @@
         <span class="tab">Streamlit</span>
         <div class="card-main">
           <div class="card-top">
-            <span class="status live">En línea</span>
+            <span class="status live">
+              <span data-lang="es">En línea</span>
+              <span data-lang="en" hidden>Live</span>
+            </span>
           </div>
-          <h2>Evaluación de Alternativas</h2>
-          <p>Calculadora que compara alternativas de compra analizando reseñas online con web scraping y análisis de sentimiento. Salió de mi tesis de grado en la UCA.</p>
+          <h2>
+            <span data-lang="es">Evaluación de Alternativas</span>
+            <span data-lang="en" hidden>Alternatives Evaluator</span>
+          </h2>
+          <dl class="specs">
+            <dt><span data-lang="es">¿De qué se trató?</span><span data-lang="en" hidden>What was it?</span></dt>
+            <dd>
+              <span data-lang="es">Comparar alternativas de compra analizando reseñas online, combinando web scraping y análisis de sentimiento. Nació como tesis de grado en la UCA.</span>
+              <span data-lang="en" hidden>Comparing purchase alternatives by analyzing online reviews, combining web scraping and sentiment analysis. Grew out of my undergrad thesis at UCA.</span>
+            </dd>
+            <dt>Stack</dt>
+            <dd>
+              <span data-lang="es">Python, Selenium/BeautifulSoup (web scraping), NLP (análisis de sentimiento), Streamlit</span>
+              <span data-lang="en" hidden>Python, Selenium/BeautifulSoup (web scraping), NLP (sentiment analysis), Streamlit</span>
+            </dd>
+            <dt><span data-lang="es">Resultados</span><span data-lang="en" hidden>Results</span></dt>
+            <dd>
+              <ul>
+                <li><span data-lang="es">Tesis defendida con nota 10/10 (Ingeniería Industrial, UCA)</span><span data-lang="en" hidden>Thesis defended with a 10/10 grade (Industrial Engineering, UCA)</span></li>
+                <li><span data-lang="es">App funcional publicada</span><span data-lang="en" hidden>Working app published</span></li>
+              </ul>
+            </dd>
+          </dl>
         </div>
         <div class="card-foot">
           <span class="url">…leworg.streamlit.app</span>
-          <a class="go" href="https://github.com/nachomondino1/evaluacion-alternativas-producto" target="_blank" rel="noopener">Ver código →</a>
-          <a class="go" href="https://repositorio.uca.edu.ar/bitstream/123456789/15200/1/evaluaci%C3%B3n-alternativas-producto.pdf" target="_blank" rel="noopener">Ver tesis →</a>
-          <a class="go" href="https://nachomondino1-evaluacion-compra-automatica-my-appinicio-leworg.streamlit.app/" target="_blank" rel="noopener">Ver app →</a>
+          <a class="go" href="https://github.com/nachomondino1/evaluacion-alternativas-producto" target="_blank" rel="noopener"><span data-lang="es">Ver código →</span><span data-lang="en" hidden>View code →</span></a>
+          <a class="go" href="https://repositorio.uca.edu.ar/bitstream/123456789/15200/1/evaluaci%C3%B3n-alternativas-producto.pdf" target="_blank" rel="noopener"><span data-lang="es">Ver tesis →</span><span data-lang="en" hidden>View thesis →</span></a>
+          <a class="go" href="https://nachomondino1-evaluacion-compra-automatica-my-appinicio-leworg.streamlit.app/" target="_blank" rel="noopener"><span data-lang="es">Ver app →</span><span data-lang="en" hidden>View app →</span></a>
         </div>
       </article>
 
@@ -41,14 +85,43 @@
         <span class="tab">Render</span>
         <div class="card-main">
           <div class="card-top">
-            <span class="status live">En línea</span>
+            <span class="status live">
+              <span data-lang="es">En línea</span>
+              <span data-lang="en" hidden>Live</span>
+            </span>
           </div>
           <h2>Alera</h2>
-          <p>Calculadoras financieras para decisiones grandes: jubilarse antes, alquilar o comprar. Cofundé el producto y lo llevé a mercado en 4 semanas.</p>
+          <p class="role">
+            <span data-lang="es">Co-Founder &amp; Product Lead · Nov 2025 – Actualidad</span>
+            <span data-lang="en" hidden>Co-Founder &amp; Product Lead · Nov 2025 – Present</span>
+          </p>
+          <dl class="specs">
+            <dt><span data-lang="es">¿De qué se trató?</span><span data-lang="en" hidden>What was it?</span></dt>
+            <dd>
+              <span data-lang="es">Calculadoras financieras para decisiones grandes: jubilarme antes, alquilar o comprar. Lo cofundé y lideré como producto.</span>
+              <span data-lang="en" hidden>Financial calculators for big decisions: retiring early, renting vs. buying. I co-founded it and led product.</span>
+            </dd>
+            <dt>Stack</dt>
+            <dd>Node.js, JavaScript, API REST</dd>
+            <dt><span data-lang="es">Resultados</span><span data-lang="en" hidden>Results</span></dt>
+            <dd>
+              <ul>
+                <li><span data-lang="es">Hipótesis de negocio validadas con usuarios reales</span><span data-lang="en" hidden>Business hypotheses validated with real users</span></li>
+                <li><span data-lang="es">Tráfico todavía muy bajo y sin cobrar aún — hoy el foco es validar interés real antes de escalar</span><span data-lang="en" hidden>Traffic still very low, not monetized yet — the focus now is validating real interest before scaling</span></li>
+              </ul>
+            </dd>
+            <dt><span data-lang="es">Aprendizajes</span><span data-lang="en" hidden>Key learnings</span></dt>
+            <dd>
+              <ul>
+                <li><span data-lang="es">Lanzar rápido no alcanza: el desafío real es lograr que alguien lo use, no solo shippear</span><span data-lang="en" hidden>Shipping fast isn't enough — the real challenge is getting someone to use it, not just launching</span></li>
+                <li><span data-lang="es">Medir comportamiento real (analytics) importa más que confiar solo en opiniones</span><span data-lang="en" hidden>Measuring real behavior (analytics) matters more than relying only on opinions</span></li>
+              </ul>
+            </dd>
+          </dl>
         </div>
         <div class="card-foot">
           <span class="url">alerafinanzas.com</span>
-          <a class="go" href="https://alerafinanzas.com/" target="_blank" rel="noopener">Ver app →</a>
+          <a class="go" href="https://alerafinanzas.com/" target="_blank" rel="noopener"><span data-lang="es">Ver app →</span><span data-lang="en" hidden>View app →</span></a>
         </div>
       </article>
 
@@ -56,14 +129,38 @@
         <span class="tab">GitHub Pages</span>
         <div class="card-main">
           <div class="card-top">
-            <span class="status live">En línea</span>
+            <span class="status live">
+              <span data-lang="es">En línea</span>
+              <span data-lang="en" hidden>Live</span>
+            </span>
           </div>
-          <h2>Recomendador de Películas</h2>
-          <p>Sistema de recomendación basado en similitud de contenido. Corre entero en el navegador, sin backend.</p>
+          <h2>
+            <span data-lang="es">Recomendador de Películas</span>
+            <span data-lang="en" hidden>Movie Recommender</span>
+          </h2>
+          <dl class="specs">
+            <dt><span data-lang="es">¿De qué se trató?</span><span data-lang="en" hidden>What was it?</span></dt>
+            <dd>
+              <span data-lang="es">Predictor personal: entrena con mis calificaciones de IMDb (+ datos de TMDB) para predecir qué nota le pondría a películas que no vi, y priorizar mi watchlist.</span>
+              <span data-lang="en" hidden>A personal predictor: trains on my own IMDb ratings (+ TMDB data) to predict the score I'd give unwatched titles, to prioritize my watchlist.</span>
+            </dd>
+            <dt>Stack</dt>
+            <dd>
+              <span data-lang="es">Python, scikit-learn (RandomForest / Gradient Boosting), API de TMDB</span>
+              <span data-lang="en" hidden>Python, scikit-learn (RandomForest / Gradient Boosting), TMDB API</span>
+            </dd>
+            <dt><span data-lang="es">Resultados</span><span data-lang="en" hidden>Results</span></dt>
+            <dd>
+              <ul>
+                <li><span data-lang="es">MAE 1,26 prediciendo la nota (baseline 1,31)</span><span data-lang="en" hidden>MAE 1.26 predicting the rating (baseline 1.31)</span></li>
+                <li><span data-lang="es">ROC AUC 0,63 clasificando si la voy a puntuar ≥7 (baseline 0,50)</span><span data-lang="en" hidden>ROC AUC 0.63 classifying whether I'd rate it ≥7 (baseline 0.50)</span></li>
+              </ul>
+            </dd>
+          </dl>
         </div>
         <div class="card-foot">
           <span class="url">nachomondino1.github.io</span>
-          <a class="go" href="https://nachomondino1.github.io/recommend_movie/" target="_blank" rel="noopener">Ver app →</a>
+          <a class="go" href="https://nachomondino1.github.io/recommend_movie/" target="_blank" rel="noopener"><span data-lang="es">Ver dashboard →</span><span data-lang="en" hidden>View dashboard →</span></a>
         </div>
       </article>
 
@@ -71,21 +168,88 @@
         <span class="tab">GitHub</span>
         <div class="card-main">
           <div class="card-top">
-            <span class="status paused">En pausa</span>
+            <span class="status paused">
+              <span data-lang="es">En pausa</span>
+              <span data-lang="en" hidden>Paused</span>
+            </span>
           </div>
-          <h2>Predictor de Apuestas</h2>
-          <p>Tiptopia, mi sportstech: predicción de resultados de fútbol con Machine Learning sobre +160.000 partidos y 40.000 jugadores, con ROI positivo y superior al de las casas de apuestas. Vivía en un VPS; hoy solo queda el código.</p>
+          <h2>
+            <span data-lang="es">Predictor de Apuestas</span>
+            <span data-lang="en" hidden>Sports Betting Predictor</span>
+          </h2>
+          <p class="role">
+            <span data-lang="es">Tiptopia · Co-Founder &amp; Product Lead · Ene 2024 – Sep 2025</span>
+            <span data-lang="en" hidden>Tiptopia · Co-Founder &amp; Product Lead · Jan 2024 – Sep 2025</span>
+          </p>
+          <dl class="specs">
+            <dt><span data-lang="es">¿De qué se trató?</span><span data-lang="en" hidden>What was it?</span></dt>
+            <dd>
+              <span data-lang="es">Predicción de resultados de fútbol con Machine Learning sobre +160.000 partidos y 40.000 jugadores.</span>
+              <span data-lang="en" hidden>Football match prediction with Machine Learning over +160,000 matches and 40,000 players.</span>
+            </dd>
+            <dt>Stack</dt>
+            <dd>Python, Selenium, scikit-learn/XGBoost, Django, MySQL, VPS</dd>
+            <dt><span data-lang="es">Resultados</span><span data-lang="en" hidden>Results</span></dt>
+            <dd>
+              <ul>
+                <li><span data-lang="es">Le ganó a una casa de apuestas con +20 años de trayectoria en su primera temporada</span><span data-lang="en" hidden>Beat a betting house with 20+ years in the market in its first season</span></li>
+                <li><span data-lang="es">Accuracy ~50% vs. ~53% de referencia — competitivo más por ROI que por precisión</span><span data-lang="en" hidden>~50% accuracy vs. ~53% reference — competitive more on ROI than on precision</span></li>
+                <li><span data-lang="es">ROI volátil: fuerte al inicio, se volvió negativo hacia el final</span><span data-lang="en" hidden>Volatile ROI: strong early on, turned negative toward the end</span></li>
+              </ul>
+            </dd>
+            <dt><span data-lang="es">Aprendizajes</span><span data-lang="en" hidden>Key learnings</span></dt>
+            <dd>
+              <ul>
+                <li><span data-lang="es">El mayor error fue esperar a estabilizar el ROI antes de hablar con usuarios reales</span><span data-lang="en" hidden>The biggest mistake was waiting to stabilize ROI before talking to real users</span></li>
+                <li><span data-lang="es">Sumar funciones antes de validar el problema central resta más de lo que suma</span><span data-lang="en" hidden>Adding features before validating the core problem subtracts more than it adds</span></li>
+              </ul>
+            </dd>
+          </dl>
         </div>
         <div class="card-foot">
           <span class="url">github.com/…/predictor-apuestas</span>
-          <a class="go" href="https://github.com/mondineta/predictor-apuestas-website" target="_blank" rel="noopener">Ver sitio →</a>
-          <a class="go" href="https://github.com/nachomondino1/predictor-apuestas" target="_blank" rel="noopener">Ver algoritmo →</a>
+          <a class="go" href="https://github.com/mondineta/predictor-apuestas-website" target="_blank" rel="noopener"><span data-lang="es">Ver sitio →</span><span data-lang="en" hidden>View site →</span></a>
+          <a class="go" href="https://github.com/nachomondino1/predictor-apuestas" target="_blank" rel="noopener"><span data-lang="es">Ver algoritmo →</span><span data-lang="en" hidden>View algorithm →</span></a>
         </div>
       </article>
 
     </div>
 
-    <footer>Actualizado a mano, ficha por ficha.</footer>
+    <footer>
+      <span data-lang="es">Actualizado a mano, ficha por ficha.</span>
+      <span data-lang="en" hidden>Updated by hand, one card at a time.</span>
+    </footer>
   </div>
+
+  <script>
+    (function () {
+      function applyLang(lang) {
+        document.querySelectorAll("[data-lang]").forEach(function (el) {
+          el.hidden = el.getAttribute("data-lang") !== lang;
+        });
+        document.documentElement.setAttribute("lang", lang);
+        document.querySelectorAll("[data-lang-btn]").forEach(function (btn) {
+          btn.setAttribute("aria-pressed", String(btn.dataset.langBtn === lang));
+        });
+      }
+
+      var saved = "es";
+      try {
+        saved = localStorage.getItem("ficheroLang") || "es";
+      } catch (e) {}
+
+      applyLang(saved);
+
+      document.querySelectorAll("[data-lang-btn]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var lang = btn.dataset.langBtn;
+          applyLang(lang);
+          try {
+            localStorage.setItem("ficheroLang", lang);
+          } catch (e) {}
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
