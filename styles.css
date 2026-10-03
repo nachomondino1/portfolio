@@ -189,7 +189,7 @@ header p {
 
 @media (max-width: 620px) {
   .card {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     padding: 24px 20px 18px;
   }
 }
@@ -305,9 +305,13 @@ header p {
   margin-bottom: 0;
 }
 
+.specs dd {
+  overflow-wrap: anywhere;
+}
+
 @media (max-width: 620px) {
   .specs {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     row-gap: 3px;
   }
 
@@ -329,12 +333,20 @@ header p {
 @media (max-width: 620px) {
   .card-foot {
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 6px 16px;
     text-align: left;
     margin-top: 12px;
     padding-top: 10px;
     border-top: 1px dashed var(--rule);
+    min-width: 0;
+  }
+
+  .url {
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 
