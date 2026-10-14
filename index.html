@@ -39,9 +39,10 @@
             <li><a href="#alternativas" data-toc="alternativas"><span class="n">01</span><span class="t"><span data-lang="es">Evaluación de Alternativas</span><span data-lang="en" hidden>Alternatives Evaluator</span></span></a></li>
             <li><a href="#alera" data-toc="alera"><span class="n">02</span><span class="t">Alera</span></a></li>
             <li><a href="#peliculas" data-toc="peliculas"><span class="n">03</span><span class="t"><span data-lang="es">Recomendador de Películas</span><span data-lang="en" hidden>Movie Recommender</span></span></a></li>
-            <li><a href="#buitres" data-toc="buitres"><span class="n">04</span><span class="t">Buitres Stats</span></a></li>
+            <li><a href="#buitres" data-toc="buitres"><span class="n">04</span><span class="t"><span data-lang="es">Estadísticas de Fútbol Amateur</span><span data-lang="en" hidden>Amateur Football Stats</span></span></a></li>
             <li><a href="#juegos" data-toc="juegos"><span class="n">05</span><span class="t"><span data-lang="es">Juegos de Mesa</span><span data-lang="en" hidden>Board Games</span></span></a></li>
             <li><a href="#apuestas" data-toc="apuestas"><span class="n">06</span><span class="t"><span data-lang="es">Predictor de Apuestas</span><span data-lang="en" hidden>Sports Betting Predictor</span></span></a></li>
+            <li><a href="#recetas" data-toc="recetas"><span class="n">07</span><span class="t"><span data-lang="es">Recetas</span><span data-lang="en" hidden>Recipes</span></span></a></li>
           </ol>
         </nav>
 
@@ -180,13 +181,16 @@
               <span class="status live"><span data-lang="es">En línea</span><span data-lang="en" hidden>Live</span></span>
               <span class="platform">GitHub Pages</span>
             </div>
-            <h2>Buitres Stats</h2>
+            <h2>
+              <span data-lang="es">Estadísticas de Fútbol Amateur</span>
+              <span data-lang="en" hidden>Amateur Football Stats</span>
+            </h2>
           </div>
         </div>
         <div class="entry-body">
           <p class="desc">
-            <span data-lang="es">Estadísticas del equipo de fútbol donde juego: resultados, rachas, goleadores y datos curiosos, con filtros. Se alimenta de un Google Sheet donde se carga cada partido.</span>
-            <span data-lang="en" hidden>Stats for the football team I play on: results, streaks, top scorers and fun facts, with filters. Fed by a Google Sheet where each match is logged.</span>
+            <span data-lang="es">Estadísticas del equipo de fútbol amateur donde juego (Buitres): resultados, rachas, goleadores y datos curiosos, con filtros. Se alimenta de un Google Sheet donde se carga cada partido.</span>
+            <span data-lang="en" hidden>Stats for the amateur football team I play on (Buitres): results, streaks, top scorers and fun facts, with filters. Fed by a Google Sheet where each match is logged.</span>
           </p>
           <p class="line"><span class="label">Stack</span><span class="value">
             <span data-lang="es">Python, JavaScript, HTML/CSS, API de Google Sheets, GitHub Actions, pytest, Claude Code</span>
@@ -287,8 +291,47 @@
           </div>
           <div class="links">
             <span class="url">github.com/…/predictor-apuestas</span>
-            <a href="https://github.com/mondineta/predictor-apuestas-website" target="_blank" rel="noopener"><span data-lang="es">Ver sitio →</span><span data-lang="en" hidden>View site →</span></a>
-            <a href="https://github.com/nachomondino1/predictor-apuestas" target="_blank" rel="noopener"><span data-lang="es">Ver algoritmo →</span><span data-lang="en" hidden>View algorithm →</span></a>
+            <a href="https://github.com/mondineta/predictor-apuestas-website" target="_blank" rel="noopener"><span data-lang="es">Ver código del sitio →</span><span data-lang="en" hidden>View site code →</span></a>
+            <a href="https://github.com/nachomondino1/predictor-apuestas" target="_blank" rel="noopener"><span data-lang="es">Ver código del algoritmo →</span><span data-lang="en" hidden>View algorithm code →</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" id="recetas">
+        <div class="entry-head">
+          <span class="index">07</span>
+          <div class="entry-head-main">
+            <div class="meta-row">
+              <span class="status live"><span data-lang="es">En línea</span><span data-lang="en" hidden>Live</span></span>
+              <span class="platform">GitHub Pages</span>
+            </div>
+            <h2>
+              <span data-lang="es">Recetas</span>
+              <span data-lang="en" hidden>Recipes</span>
+            </h2>
+          </div>
+        </div>
+        <div class="entry-body">
+          <p class="desc">
+            <span data-lang="es">Catálogo de recetas familiares (30 y sumando) que antes vivían en un Google Doc: cards con foto, tiempo y dificultad, filtrables por categoría y ordenables por tiempo, para encontrar qué cocinar de un vistazo en vez de scrollear un documento de texto.</span>
+            <span data-lang="en" hidden>A catalog of family recipes (30 and counting) that used to live in a Google Doc: cards with photo, time and difficulty, filterable by category and sortable by time, to find what to cook at a glance instead of scrolling a text document.</span>
+          </p>
+          <p class="line"><span class="label">Stack</span><span class="value">
+            <span data-lang="es">Python, JavaScript vanilla (SPA con hash routing), HTML/CSS, Google Docs (vía conector de Claude Code), pytest, Claude Code</span>
+            <span data-lang="en" hidden>Python, vanilla JavaScript (hash-routed SPA), HTML/CSS, Google Docs (via Claude Code connector), pytest, Claude Code</span>
+          </span></p>
+          <div class="block">
+            <span class="label"><span data-lang="es">Resultados</span><span data-lang="en" hidden>Results</span></span>
+            <ul>
+              <li><span data-lang="es">El Google Doc sigue siendo la fuente de verdad; un sync semi-automático lo convierte en recetas Markdown, detectando qué cambió de verdad para no revisar todo a mano cada vez</span><span data-lang="en" hidden>The Google Doc stays the source of truth; a semi-automated sync converts it into Markdown recipes, detecting what actually changed so not everything needs a manual re-check each time</span></li>
+              <li><span data-lang="es">Sub-recetas repetidas (masa sablée, crema pastelera) viven una sola vez como fragmentos compartidos e incluidos donde hacen falta, eliminando el problema de recetas duplicadas del Doc original</span><span data-lang="en" hidden>Sub-recipes that repeat (sablé dough, pastry cream) live once as shared fragments included wherever needed, solving the duplicate-recipe problem from the original Doc</span></li>
+              <li><span data-lang="es">Datos rotos frenan la publicación: el export valida cada receta y nunca pisa el sitio en línea con contenido inconsistente</span><span data-lang="en" hidden>Broken data halts publishing: the export validates every recipe and never overwrites the live site with inconsistent content</span></li>
+            </ul>
+          </div>
+          <div class="links">
+            <span class="url">nachomondino1.github.io</span>
+            <a href="https://github.com/nachomondino1/recetas" target="_blank" rel="noopener"><span data-lang="es">Ver código →</span><span data-lang="en" hidden>View code →</span></a>
+            <a href="https://nachomondino1.github.io/recetas/#/" target="_blank" rel="noopener"><span data-lang="es">Ver app →</span><span data-lang="en" hidden>View app →</span></a>
           </div>
         </div>
       </article>
