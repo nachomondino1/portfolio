@@ -60,6 +60,7 @@
             <li><a href="#peliculas" data-toc="peliculas"><span class="n">05</span><span class="t"><span data-lang="es">Recomendador de Películas</span><span data-lang="en" hidden>Movie Recommender</span></span></a></li>
             <li><a href="#juegos" data-toc="juegos"><span class="n">06</span><span class="t"><span data-lang="es">Juegos de Mesa</span><span data-lang="en" hidden>Board Games</span></span></a></li>
             <li><a href="#recetas" data-toc="recetas"><span class="n">07</span><span class="t"><span data-lang="es">Recetas</span><span data-lang="en" hidden>Recipes</span></span></a></li>
+            <li><a href="#review-analysis" data-toc="review-analysis"><span class="n">08</span><span class="t"><span data-lang="es">Análisis de Reseñas</span><span data-lang="en" hidden>Review Analysis</span></span></a></li>
           </ol>
         </nav>
 
@@ -357,6 +358,45 @@
             <span class="url">nachomondino1.github.io</span>
             <a href="https://github.com/nachomondino1/recetas" target="_blank" rel="noopener"><span data-lang="es">Ver código →</span><span data-lang="en" hidden>View code →</span></a>
             <a href="https://nachomondino1.github.io/recetas/#/" target="_blank" rel="noopener"><span data-lang="es">Ver app →</span><span data-lang="en" hidden>View app →</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" id="review-analysis">
+        <div class="entry-head">
+          <span class="index">08</span>
+          <div class="entry-head-main">
+            <div class="meta-row">
+              <span class="status live"><span data-lang="es">En línea</span><span data-lang="en" hidden>Live</span></span>
+              <span class="platform">GitHub Pages</span>
+            </div>
+            <h2>
+              <span data-lang="es">Análisis de Reseñas</span>
+              <span data-lang="en" hidden>Review Analysis</span>
+            </h2>
+          </div>
+        </div>
+        <div class="entry-body">
+          <p class="desc">
+            <span data-lang="es">Pipeline que extrae reseñas de apps en Google Play y App Store, las analiza (sentimiento + tópicos) y genera un dashboard autocontenido con los hallazgos más accionables: qué se queja o valora la gente, ordenado por severidad, con recomendación y ejemplos reales.</span>
+            <span data-lang="en" hidden>A pipeline that pulls app reviews from Google Play and the App Store, analyzes them (sentiment + topics), and generates a self-contained dashboard with the most actionable findings: what people complain about or value, ranked by severity, with a recommendation and real examples.</span>
+          </p>
+          <p class="line"><span class="label">Stack</span><span class="value">
+            <span data-lang="es">Python, pysentimiento, BERTopic + sentence-transformers, HTML/CSS/JS, Claude Code</span>
+            <span data-lang="en" hidden>Python, pysentimiento, BERTopic + sentence-transformers, HTML/CSS/JS, Claude Code</span>
+          </span></p>
+          <div class="block">
+            <span class="label"><span data-lang="es">Resultados</span><span data-lang="en" hidden>Results</span></span>
+            <ul>
+              <li><span data-lang="es">Organizado en fases al estilo CRISP-DM (recolección → limpieza → modelado → evaluación → deployment), con una empresa nueva analizable solo pasando su id de tienda</span><span data-lang="en" hidden>Organized in CRISP-DM-style phases (collection → cleaning → modeling → evaluation → deployment), with a new company analyzable just by passing its store id</span></li>
+              <li><span data-lang="es">Fusión automática de tópicos casi idénticos (37 → 18 en un caso real) y detección de si una caída de reseñas negativas está atada a una versión específica, con test de significancia</span><span data-lang="en" hidden>Automatic merging of near-duplicate topics (37 → 18 in a real case) and detection of whether a spike in negative reviews ties to a specific app version, backed by a significance test</span></li>
+              <li><span data-lang="es">Dashboard final sin backend ni build: un HTML por empresa, listo para compartir por link</span><span data-lang="en" hidden>Final dashboard with no backend or build step: one HTML per company, ready to share via link</span></li>
+            </ul>
+          </div>
+          <div class="links">
+            <span class="url">nachomondino1.github.io</span>
+            <a href="https://github.com/nachomondino1/review_analysis" target="_blank" rel="noopener"><span data-lang="es">Ver código →</span><span data-lang="en" hidden>View code →</span></a>
+            <a href="https://nachomondino1.github.io/review_analysis" target="_blank" rel="noopener"><span data-lang="es">Ver dashboards →</span><span data-lang="en" hidden>View dashboards →</span></a>
           </div>
         </div>
       </article>
