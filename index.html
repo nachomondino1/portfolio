@@ -353,15 +353,15 @@
           <div class="block">
             <span class="label"><span data-lang="es">Objetivo del proyecto</span><span data-lang="en" hidden>Project objective</span></span>
             <p>
-              <span data-lang="es">Saber rápido qué juego de mesa tengo que se ajuste al momento (cuántos somos, cuánto tiempo hay) y qué juego comprar después, en vez de depender de la memoria.</span>
-              <span data-lang="en" hidden>Quickly knowing which board game I own fits the moment (how many people, how much time) and which one to buy next, instead of relying on memory.</span>
+              <span data-lang="es">Saber rápido qué juego de mesa de mi colección se ajusta al momento (cuántos somos, cuánto tiempo hay) y qué comprar después, sin depender de la memoria ni mantener un catálogo a mano.</span>
+              <span data-lang="en" hidden>Quickly knowing which board game in my collection fits the moment (how many people, how much time) and what to buy next, without relying on memory or maintaining a catalog by hand.</span>
             </p>
           </div>
           <div class="block">
             <span class="label"><span data-lang="es">¿De qué se trata?</span><span data-lang="en" hidden>What's it about?</span></span>
             <p>
-              <span data-lang="es">Catálogo de mi colección (57 juegos) con buscador y filtros, más dos páginas extra: "¿Qué jugamos hoy?" (recomienda qué jugar según cuántos son) y "¿Cuál comprar?" (filtra la watchlist por duración y complejidad). Los datos vienen de un Google Sheet.</span>
-              <span data-lang="en" hidden>A catalog of my collection (57 games) with search and filters, plus two extra pages: "What should we play today?" (recommends games based on player count) and "Which one to buy?" (filters my watchlist by duration and complexity). Data comes from a Google Sheet.</span>
+              <span data-lang="es">Catálogo de ~27.800 juegos (dataset de BGG + API oficial) cruzado con mi colección real de BoardGameGeek, que se trae sola. Cuatro páginas: Mi ludoteca (lo que tengo), "¿Qué jugamos hoy?" (qué puedo jugar según cuántos somos), "¿Cuál comprar?" (watchlist filtrable por duración, complejidad y jugadores, con precio de referencia y link a Cazagangas) y un comparador lado a lado de dos juegos.</span>
+              <span data-lang="en" hidden>A catalog of ~27,800 games (BGG dataset + official API) cross-referenced with my real BoardGameGeek collection, pulled automatically. Four pages: Mi ludoteca (what I own), "What should we play today?" (what I can play based on player count), "Which one to buy?" (a watchlist filterable by duration, complexity and player count, with reference price and a Cazagangas link) and a side-by-side comparison of two games.</span>
             </p>
           </div>
           <p class="line"><span class="label">Stack</span><span class="value">
@@ -371,8 +371,9 @@
           <div class="block">
             <span class="label"><span data-lang="es">Resultados</span><span data-lang="en" hidden>Results</span></span>
             <ul>
-              <li><span data-lang="es">Pipeline automático: Google Sheet → CSV → data.json, sincronizado una vez al mes (o a mano) vía GitHub Actions</span><span data-lang="en" hidden>Automated pipeline: Google Sheet → CSV → data.json, synced monthly (or on demand) via GitHub Actions</span></li>
-              <li><span data-lang="es">Recomendador heurístico combina gusto personal, cantidad ideal de jugadores y puntaje para sugerir qué jugar</span><span data-lang="en" hidden>Heuristic recommender combines personal taste, ideal player count and rating to suggest what to play</span></li>
+              <li><span data-lang="es">Catálogo sincronizado contra la API oficial de BGG (antes era un Google Sheet a mano), con mi colección (Own / Want to buy / Watchlist) trayéndose sola desde BGG</span><span data-lang="en" hidden>Catalog synced against the official BGG API (used to be a manual Google Sheet), with my collection (Own / Want to buy / Watchlist) pulled automatically from BGG</span></li>
+              <li><span data-lang="es">Backend propio en Cloudflare Workers para pedir mi colección en vivo, con caché de horas por usuario para no gastar la cuota del token compartido</span><span data-lang="en" hidden>A dedicated Cloudflare Workers backend to fetch my collection live, cached for hours per user to avoid burning through the shared token's quota</span></li>
+              <li><span data-lang="es">Variantes y expansiones del mismo juego (ej. las cajas de Unmatched) se agrupan en una sola tarjeta en "¿Cuál comprar?" en vez de duplicarse</span><span data-lang="en" hidden>Variants and expansions of the same game (e.g. the Unmatched boxes) are grouped into a single card in "Which one to buy?" instead of showing up as duplicates</span></li>
             </ul>
           </div>
           <div class="links">
