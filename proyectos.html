@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Portafolio de Ignacio Mondino</title>
+  <meta name="description" content="Índice de proyectos y apps de Ignacio Mondino, con dónde viven y cómo están hoy.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nachomondino1.github.io/portfolio/proyectos.html">
+  <meta property="og:title" content="Portafolio de Ignacio Mondino">
+  <meta property="og:description" content="Índice de proyectos y apps de Ignacio Mondino, con dónde viven y cómo están hoy.">
+  <meta property="og:image" content="https://nachomondino1.github.io/portfolio/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portafolio de Ignacio Mondino">
+  <meta name="twitter:description" content="Índice de proyectos y apps de Ignacio Mondino, con dónde viven y cómo están hoy.">
+  <meta name="twitter:image" content="https://nachomondino1.github.io/portfolio/og-image.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    try {
+      if (localStorage.getItem("ficheroLang") === "en") document.documentElement.setAttribute("lang", "en");
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">Nacho Mondino</a>
+      <nav class="topnav" aria-label="Principal">
+        <a href="proyectos.html" aria-current="page"><span data-lang="es">Proyectos</span><span data-lang="en" hidden>Projects</span></a>
+        <a href="blog.html"><span data-lang="es">Blog</span><span data-lang="en" hidden>Blog</span></a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang-btn="es">ES</button>
+        <button type="button" data-lang-btn="en">EN</button>
+      </div>
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div class="identity">
+          <h1>
+            <span data-lang="es">Proyectos</span>
+            <span data-lang="en" hidden>Projects</span>
+          </h1>
+          <p class="intro">
+            <span data-lang="es">Apps y modelos que fui armando, con dónde viven y cómo están hoy.</span>
+            <span data-lang="en" hidden>Apps and models I've built — where they live and how they're doing today.</span>
+          </p>
+        </div>
+
+        <nav class="toc" aria-label="Índice de proyectos">
+          <p class="toc-group"><span data-lang="es">Startups y producto</span><span data-lang="en" hidden>Startups &amp; product</span></p>
+          <ol>
+            <li><a href="#alera" data-toc="alera"><span class="n">01</span><span class="t">Alera</span></a></li>
+            <li><a href="#apuestas" data-toc="apuestas"><span class="n">02</span><span class="t"><span data-lang="es">Predictor de Apuestas</span><span data-lang="en" hidden>Sports Betting Predictor</span></span></a></li>
+            <li><a href="#alternativas" data-toc="alternativas"><span class="n">03</span><span class="t"><span data-lang="es">Evaluación de Alternativas</span><span data-lang="en" hidden>Alternatives Evaluator</span></span></a></li>
+          </ol>
+          <p class="toc-group"><span data-lang="es">Proyectos personales</span><span data-lang="en" hidden>Personal projects</span></p>
+          <ol>
+            <li><a href="#buitres" data-toc="buitres"><span class="n">04</span><span class="t"><span data-lang="es">Estadísticas de Fútbol Amateur</span><span data-lang="en" hidden>Amateur Football Stats</span></span></a></li>
+            <li><a href="#peliculas" data-toc="peliculas"><span class="n">05</span><span class="t"><span data-lang="es">Recomendador de Películas</span><span data-lang="en" hidden>Movie Recommender</span></span></a></li>
+            <li><a href="#juegos" data-toc="juegos"><span class="n">06</span><span class="t"><span data-lang="es">Juegos de Mesa</span><span data-lang="en" hidden>Board Games</span></span></a></li>
+            <li><a href="#recetas" data-toc="recetas"><span class="n">07</span><span class="t"><span data-lang="es">Recetas</span><span data-lang="en" hidden>Recipes</span></span></a></li>
+            <li><a href="#review-analysis" data-toc="review-analysis"><span class="n">08</span><span class="t"><span data-lang="es">Análisis de Reseñas</span><span data-lang="en" hidden>Review Analysis</span></span></a></li>
+          </ol>
+        </nav>
+
+        <p class="sidebar-foot">
+          <span data-lang="es">Actualizado a mano, proyecto por proyecto.</span>
+          <span data-lang="en" hidden>Updated by hand, one project at a time.</span>
+        </p>
+      </div>
+    </aside>
+
+    <main class="main">
+
+      <div class="group-head">
+        <span class="group-label"><span data-lang="es">Startups y producto</span><span data-lang="en" hidden>Startups &amp; product</span></span>
+      </div>
+
+      <article class="entry group-start" id="alera">
+        <div class="entry-head">
+          <span class="index">01</span>
+          <div class="entry-head-main">
+            <div class="meta-row">
+              <span class="status live"><span data-lang="es">En línea</span><span data-lang="en" hidden>Live</span></span>
+              <span class="platform">Cloudflare Workers</span>
+            </div>
+            <h2>Alera</h2>
+            <p class="role">
+              <span data-lang="es">Co-Founder &amp; Product Lead · Nov 2025 – Actualidad</span>
+              <span data-lang="en" hidden>Co-Founder &amp; Product Lead · Nov 2025 – Present</span>
+            </p>
+          </div>
+        </div>
+        <div class="entry-body">
+          <div class="block">
+            <span class="label"><span data-lang="es">Objetivo del proyecto</span><span data-lang="en" hidden>Project objective</span></span>
+            <p>
+              <span data-lang="es">Tomar decisiones financieras grandes (jubilarme antes, alquilar o comprar) con datos propios en vez de intuición o reglas genéricas.</span>
+              <span data-lang="en" hidden>Making big financial decisions (retiring early, renting vs. buying) from my own numbers instead of intuition or generic rules of thumb.</span>
+            </p>
+          </div>
+          <div class="block">
+            <span class="label"><span data-lang="es">¿De qué se trata?</span><span data-lang="en" hidden>What's it about?</span></span>
+            <p>
+              <span data-lang="es">Calculadoras financieras interactivas que simulan estos escenarios con los números de cada usuario.</span>
+              <span data-lang="en" hidden>Interactive financial calculators that simulate these scenarios using each user's own numbers.</span>
+            </p>
+          </div>
+          <p class="line"><span class="label">Stack</span><span class="value">Node.js, JavaScript, API REST, Cloudflare Workers</span></p>
+          <div class="block">
+            <span class="label"><span data-lang="es">Resultados</span><span data-lang="en" hidden>Results</span></span>
+            <ul>
+              <li><span data-lang="es">Hipótesis de negocio validadas con usuarios reales</span><span data-lang="en" hidden>Business hypotheses validated with real users</span></li>
+              <li><span data-lang="es">Tráfico todavía muy bajo y sin cobrar aún — hoy el foco es validar interés real antes de escalar</span><span data-lang="en" hidden>Traffic still very low, not monetized yet — the focus now is validating real interest before scaling</span></li>
+            </ul>
+          </div>
+          <div class="block">
+            <span class="label"><span data-lang="es">Aprendizajes</span><span data-lang="en" hidden>Key learnings</span></span>
+            <ul>
+              <li><span data-lang="es">Lanzar rápido no alcanza: el desafío real es lograr que alguien lo use, no solo shippear</span><span data-lang="en" hidden>Shipping fast isn't enough — the real challenge is getting someone to use it, not just launching</span></li>
+              <li><span data-lang="es">Medir comportamiento real (analytics) importa más que confiar solo en opiniones</span><span data-lang="en" hidden>Measuring real behavior (analytics) matters more than relying only on opinions</span></li>
+            </ul>
+          </div>
+          <div class="links">
+            <span class="url">alera.nachomondino1.workers.dev</span>
+            <a href="https://alera.nachomondino1.workers.dev/" target="_blank" rel="noopener"><span data-lang="es">Ver app →</span><span data-lang="en" hidden>View app →</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" id="apuestas">
+        <div class="entry-head">
+          <span class="index">02</span>
+          <div class="entry-head-main">
+            <div class="meta-row">
+              <span class="status paused"><span data-lang="es">En pausa</span><span data-lang="en" hidden>Paused</span></span>
+              <span class="platform">GitHub</span>
+            </div>
+            <h2>
+              <span data-lang="es">Predictor de Apuestas</span>
+              <span data-lang="en" hidden>Sports Betting Predictor</span>
+            </h2>
+            <p class="role">
+              <span data-lang="es">Tiptopia · Co-Founder &amp; Product Lead · Ene 2024 – Sep 2025</span>
+              <span data-lang="en" hidden>Tiptopia · Co-Founder &amp; Product Lead · Jan 2024 – Sep 2025</span>
+            </p>
+          </div>
+        </div>
+        <div class="entry-body">
+          <div class="block">
+            <span class="label"><span data-lang="es">Objetivo del proyecto</span><span data-lang="en" hidden>Project objective</span></span>
+            <p>
+              <span data-lang="es">Encontrar un edge sistemático contra las casas de apuestas de fútbol a partir de datos, no de intuición.</span>
+              <span data-lang="en" hidden>Finding a systematic edge against football betting houses from data, not intuition.</span>
+            </p>
+          </div>
+          <div class="block">
+            <span class="label"><span data-lang="es">¿De qué se trata?</span><span data-lang="en" hidden>What's it about?</span></span>
+            <p>
+              <span data-lang="es">Modelo de Machine Learning entrenado sobre +160.000 partidos y 40.000 jugadores para predecir resultados de fútbol.</span>
+              <span data-lang="en" hidden>A Machine Learning model trained on 160,000+ matches and 40,000 players to predict football match outcomes.</span>
+            </p>
+          </div>
+          <p class="line"><span class="label">Stack</span><span class="value">Python, Selenium, scikit-learn/XGBoost, Django, MySQL, VPS</span></p>
+          <div class="block">
+            <span class="label"><span data-lang="es">Resultados</span><span data-lang="en" hidden>Results</span></span>
+            <ul>
+              <li><span data-lang="es">Le ganó a una casa de apuestas con +20 años de trayectoria en su primera temporada</span><span data-lang="en" hidden>Beat a betting house with 20+ years in the market in its first season</span></li>
+              <li><span data-lang="es">Accuracy ~50% vs. ~53% de referencia — competitivo más por ROI que por precisión</span><span data-lang="en" hidden>~50% accuracy vs. ~53% reference — competitive more on ROI than on precision</span></li>
+              <li><span data-lang="es">ROI volátil: fuerte al inicio, se volvió negativo hacia el final</span><span data-lang="en" hidden>Volatile ROI: strong early on, turned negative toward the end</span></li>
+            </ul>
+          </div>
+          <div class="block">
+            <span class="label"><span data-lang="es">Aprendizajes</span><span data-lang="en" hidden>Key learnings</span></span>
+            <ul>
+              <li><span data-lang="es">El mayor error fue esperar a estabilizar el ROI antes de hablar con usuarios reales</span><span data-lang="en" hidden>The biggest mistake was waiting to stabilize ROI before talking to real users</span></li>
+              <li><span data-lang="es">Sumar funciones antes de validar el problema central resta más de lo que suma</span><span data-lang="en" hidden>Adding features before validating the core problem subtracts more than it adds</span></li>
+            </ul>
+          </div>
+          <div class="links">
+            <span class="url">github.com/…/predictor-apuestas</span>
+            <a href="https://github.com/mondineta/predictor-apuestas-website" target="_blank" rel="noopener"><span data-lang="es">Ver código del sitio →</span><span data-lang="en" hidden>View site code →</span></a>
+            <a href="https://github.com/nachomondino1/predictor-apuestas" target="_blank" rel="noopener"><span data-lang="es">Ver código del algoritmo →</span><span data-lang="en" hidden>View algorithm code →</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" id="alternativas">
+        <div class="entry-head">
+          <span class="index">03</span>
+          <div class="entry-head-main">
+            <div class="meta-row">
+              <span class="status live"><span data-lang="es">En línea</span><span data-lang="en" hidden>Live</span></span>
+              <span class="platform">Streamlit</span>
+            </div>
+            <h2>
+              <span data-lang="es">Evaluación de Alternativas</span>
+              <span data-lang="en" hidden>Alternatives Evaluator</span>
+            </h2>
+          </div>
+        </div>
+        <div class="entry-body">
+          <div class="block">
+            <span class="label"><span data-lang="es">Objetivo del proyecto</span><span data-lang="en" hidden>Project objective</span></span>
+            <p>
+              <span data-lang="es">Elegir entre alternativas de compra en base a lo que dicen las reseñas reales, no solo specs o precio. Nació como tesis de grado en la UCA.</span>
+              <span data-lang="en" hidden>Choosing between purchase alternatives based on what real reviews say, not just specs or price. Grew out of my undergrad thesis at UCA.</span>
+            </p>
+          </div>
+          <div class="block">
+            <span class="label"><span data-lang="es">¿De qué se trata?</span><span data-lang="en" hidden>What's it about?</span></span>
+            <p>
+              <span data-lang="es">Scrapea reseñas online de los productos a comparar y les aplica análisis de sentimiento para puntuar cada alternativa automáticamente.</span>
+              <span data-lang="en" hidden>Scrapes online reviews for the products being compared and runs sentiment analysis to score each alternative automatically.</span>
+            </p>
+          </div>
+          <p class="line"><span class="label">Stack</span><span class="value">
+            <span data-lang="es">Python, Selenium/BeautifulSoup (web scraping), NLP (análisis de sentimiento), Streamlit</span>
+            <span data-lang="en" hidden>Python, Selenium/BeautifulSoup (web scraping), NLP (sentiment analysis), Streamlit</span>
+          </span></p>
+          <div class="block">
+            <span class="label"><span data-lang="es">Resultados</span><span data-lang="en" hidden>Results</span></span>
+            <ul>
+              <li><span data-lang="es">Tesis defendida con nota 10/10 (Ingeniería Industrial, UCA)</span><span data-lang="en" hidden>Thesis defended with a 10/10 grade (Industrial Engineering, UCA)</span></li>
+              <li><span data-lang="es">App funcional publicada</span><span data-lang="en" hidden>Working app published</span></li>
+            </ul>
+          </div>
+          <div class="links">
+            <span class="url">nachomondino1.github.io/evaluacion-alternativas-producto</span>
+            <a href="https://github.com/nachomondino1/evaluacion-alternativas-producto" target="_blank" rel="noopener"><span data-lang="es">Ver código →</span><span data-lang="en" hidden>View code →</span></a>
+            <a href="https://repositorio.uca.edu.ar/bitstream/123456789/15200/1/evaluaci%C3%B3n-alternativas-producto.pdf" target="_blank" rel="noopener"><span data-lang="es">Ver tesis →</span><span data-lang="en" hidden>View thesis →</span></a>
+            <a href="https://nachomondino1.github.io/evaluacion-alternativas-producto/" target="_blank" rel="noopener"><span data-lang="es">Ver app →</span><span data-lang="en" hidden>View app →</span></a>
+          </div>
+        </div>
+      </article>
+
+      <div class="group-head">
+        <span class="group-label"><span data-lang="es">Proyectos personales</span><span data-lang="en" hidden>Personal projects</span></span>
+      </div>
+
+      <article class="entry group-start" id="buitres">
+        <div class="entry-head">
+          <span class="index">04</span>
+          <div class="entry-head-main">
+            <div class="meta-row">
+              <span class="status live"><span data-lang="es">En línea</span><span data-lang="en" hidden>Live</span></span>
+              <span class="platform">GitHub Pages</span>
+            </div>
+            <h2>
+              <span data-lang="es">Estadísticas de Fútbol Amateur</span>
+              <span data-lang="en" hidden>Amateur Football Stats</span>
+            </h2>
+          </div>
+        </div>
+        <div class="entry-body">
+          <div class="block">
+            <span class="label"><span data-lang="es">Objetivo del proyecto</span><span data-lang="en" hidden>Project objective</span></span>
+            <p>
+              <span data-lang="es">Tener en un solo lugar accesible las estadísticas del equipo amateur donde juego (Buitres), en vez de reconstruirlas de memoria o de charlas sueltas.</span>
+              <span data-lang="en" hidden>Having the stats for the amateur team I play on (Buitres) in one accessible place, instead of piecing them together from memory or group chats.</span>
+            </p>
+          </div>
+          <div class="block">
+            <span class="label"><span data-lang="es">¿De qué se trata?</span><span data-lang="en" hidden>What's it about?</span></span>
+            <p>
+              <span data-lang="es">Sitio con resultados, rachas, goleadores y datos curiosos, con filtros, alimentado por un Google Sheet donde se carga cada partido.</span>
+              <span data-lang="en" hidden>A site with results, streaks, top scorers and fun facts, with filters, fed by a Google Sheet where each match is logged.</span>
+            </p>
+          </div>
+          <p class="line"><span class="label">Stack</span><span class="value">
+            <span data-lang="es">Python, JavaScript, HTML/CSS, API de Google Sheets, GitHub Actions, pytest, Claude Code</span>
+            <span data-lang="en" hidden>Python, JavaScript, HTML/CSS, Google Sheets API, GitHub Actions, pytest, Claude Code</span>
+          </span></p>
+          <div class="block">
+            <span class="label"><span data-lang="es">Resultados</span><span data-lang="en" hidden>Results</span></span>
+            <ul>
+              <li><span data-lang="es">Pipeline automatizado: Google Sheet → validación → sitio estático, publicado con CI/CD</span><span data-lang="en" hidden>Automated pipeline: Google Sheet → validation → static site, published through CI/CD</span></li>
+              <li><span data-lang="es">Si hay datos rotos el deploy se frena y el sitio no se toca; tests de paridad entre Python y JS</span><span data-lang="en" hidden>Broken data halts the deploy and leaves the live site untouched; Python/JS parity tests</span></li>
+              <li><span data-lang="es">Filtros guardados en la URL: cualquier vista se puede compartir con un link</span><span data-lang="en" hidden>Filters stored in the URL: any view can be shared with a link</span></li>
+            </ul>
+          </div>
+          <div class="links">
+            <span class="url">nachomondino1.github.io</span>
+            <a href="https://github.com/nachomondino1/buitres-stats" target="_blank" rel="noopener"><span data-lang="es">Ver código →</span><span data-lang="en" hidden>View code →</span></a>
+            <a href="https://nachomondino1.github.io/buitres-stats/" target="_blank" rel="noopener"><span data-lang="es">Ver app →</span><span data-lang="en" hidden>View app →</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" id="peliculas">
+        <div class="entry-head">
+          <span class="index">05</span>
+          <div class="entry-head-main">
+            <div class="meta-row">
+              <span class="status live"><span data-lang="es">En línea</span><span data-lang="en" hidden>Live</span></span>
+              <span class="platform">GitHub Pages</span>
+            </div>
+            <h2>
+              <span data-lang="es">Recomendador de Películas</span>
+              <span data-lang="en" hidden>Movie Recommender</span>
+            </h2>
+          </div>
+        </div>
+        <div class="entry-body">
+          <div class="block">
+            <span class="label"><span data-lang="es">Objetivo del proyecto</span><span data-lang="en" hidden>Project objective</span></span>
+            <p>
+              <span data-lang="es">Priorizar qué película ver de mi watchlist en vez de decidir al azar o por tráiler.</span>
+              <span data-lang="en" hidden>Prioritizing which movie to watch from my watchlist instead of deciding at random or by trailer.</span>
+            </p>
+          </div>
+          <div class="block">
+            <span class="label"><span data-lang="es">¿De qué se trata?</span><span data-lang="en" hidden>What's it about?</span></span>
+            <p>
+              <span data-lang="es">Predictor personal que entrena con mis calificaciones históricas de IMDb (+ datos de TMDB) para predecir qué nota le pondría a películas que no vi.</span>
+              <span data-lang="en" hidden>A personal predictor that trains on my own historical IMDb ratings (+ TMDB data) to predict the score I'd give unwatched titles.</span>
+            </p>
+          </div>
+          <p class="line"><span class="label">Stack</span><span class="value">
+            <span data-lang="es">Python, scikit-learn (RandomForest / Gradient Boosting), API de TMDB</span>
+            <span data-lang="en" hidden>Python, scikit-learn (RandomForest / Gradient Boosting), TMDB API</span>
+          </span></p>
+          <div class="block">
+            <span class="label"><span data-lang="es">Resultados</span><span data-lang="en" hidden>Results</span></span>
+            <ul>
+              <li><span data-lang="es">MAE 1,26 prediciendo la nota (baseline 1,31)</span><span data-lang="en" hidden>MAE 1.26 predicting the rating (baseline 1.31)</span></li>
+              <li><span data-lang="es">ROC AUC 0,63 clasificando si la voy a puntuar ≥7 (baseline 0,50)</span><span data-lang="en" hidden>ROC AUC 0.63 classifying whether I'd rate it ≥7 (baseline 0.50)</span></li>
+            </ul>
+          </div>
+          <div class="links">
+            <span class="url">nachomondino1.github.io</span>
+            <a href="https://nachomondino1.github.io/recommend_movie/" target="_blank" rel="noopener"><span data-lang="es">Ver dashboard →</span><span data-lang="en" hidden>View dashboard →</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" id="juegos">
+        <div class="entry-head">
+          <span class="index">06</span>
+          <div class="entry-head-main">
+            <div class="meta-row">
+              <span class="status live"><span data-lang="es">En línea</span><span data-lang="en" hidden>Live</span></span>
+              <span class="platform">Cloudflare Workers</span>
+            </div>
+            <h2>
+              <span data-lang="es">Juegos de Mesa</span>
+              <span data-lang="en" hidden>Board Games</span>
+            </h2>
+          </div>
+        </div>
+        <div class="entry-body">
+          <div class="block">
+            <span class="label"><span data-lang="es">Objetivo del proyecto</span><span data-lang="en" hidden>Project objective</span></span>
+            <p>
+              <span data-lang="es">Saber rápido qué juego de mesa de mi colección se ajusta al momento (cuántos somos, cuánto tiempo hay) y qué comprar después, sin depender de la memoria ni mantener un catálogo a mano.</span>
+              <span data-lang="en" hidden>Quickly knowing which board game in my collection fits the moment (how many people, how much time) and what to buy next, without relying on memory or maintaining a catalog by hand.</span>
+            </p>
+          </div>
+          <div class="block">
+            <span class="label"><span data-lang="es">¿De qué se trata?</span><span data-lang="en" hidden>What's it about?</span></span>
+            <p>
+              <span data-lang="es">Catálogo de ~27.800 juegos (dataset de BGG + API oficial) cruzado con mi colección real de BoardGameGeek, que se trae sola. Cuatro páginas: Mi ludoteca (lo que tengo), "¿Qué jugamos hoy?" (qué puedo jugar según cuántos somos), "¿Cuál comprar?" (watchlist filtrable por duración, complejidad y jugadores, con precio de referencia y link a Cazagangas) y un comparador lado a lado de dos juegos.</span>
+              <span data-lang="en" hidden>A catalog of ~27,800 games (BGG dataset + official API) cross-referenced with my real BoardGameGeek collection, pulled automatically. Four pages: Mi ludoteca (what I own), "What should we play today?" (what I can play based on player count), "Which one to buy?" (a watchlist filterable by duration, complexity and player count, with reference price and a Cazagangas link) and a side-by-side comparison of two games.</span>
+            </p>
+          </div>
+          <p class="line"><span class="label">Stack</span><span class="value">
+            <span data-lang="es">HTML/CSS/JS vanilla, Python, API de BoardGameGeek (BGG), Cloudflare Workers</span>
+            <span data-lang="en" hidden>Vanilla HTML/CSS/JS, Python, BoardGameGeek (BGG) API, Cloudflare Workers</span>
+          </span></p>
+          <div class="block">
+            <span class="label"><span data-lang="es">Resultados</span><span data-lang="en" hidden>Results</span></span>
+            <ul>
+              <li><span data-lang="es">Catálogo sincronizado contra la API oficial de BGG (antes era un Google Sheet a mano), con mi colección (Own / Want to buy / Watchlist) trayéndose sola desde BGG</span><span data-lang="en" hidden>Catalog synced against the official BGG API (used to be a manual Google Sheet), with my collection (Own / Want to buy / Watchlist) pulled automatically from BGG</span></li>
+              <li><span data-lang="es">Backend propio en Cloudflare Workers para pedir mi colección en vivo, con caché de horas por usuario para no gastar la cuota del token compartido</span><span data-lang="en" hidden>A dedicated Cloudflare Workers backend to fetch my collection live, cached for hours per user to avoid burning through the shared token's quota</span></li>
+              <li><span data-lang="es">Variantes y expansiones del mismo juego (ej. las cajas de Unmatched) se agrupan en una sola tarjeta en "¿Cuál comprar?" en vez de duplicarse</span><span data-lang="en" hidden>Variants and expansions of the same game (e.g. the Unmatched boxes) are grouped into a single card in "Which one to buy?" instead of showing up as duplicates</span></li>
+            </ul>
+          </div>
+          <div class="links">
+            <span class="url">boardgame-mvp.nachomondino1.workers.dev</span>
+            <a href="https://github.com/nachomondino1/boardgame" target="_blank" rel="noopener"><span data-lang="es">Ver código →</span><span data-lang="en" hidden>View code →</span></a>
+            <a href="https://boardgame-mvp.nachomondino1.workers.dev/" target="_blank" rel="noopener"><span data-lang="es">Ver app →</span><span data-lang="en" hidden>View app →</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" id="recetas">
+        <div class="entry-head">
+          <span class="index">07</span>
+          <div class="entry-head-main">
+            <div class="meta-row">
+              <span class="status live"><span data-lang="es">En línea</span><span data-lang="en" hidden>Live</span></span>
+              <span class="platform">GitHub Pages</span>
+            </div>
+            <h2>
+              <span data-lang="es">Recetas</span>
+              <span data-lang="en" hidden>Recipes</span>
+            </h2>
+          </div>
+        </div>
+        <div class="entry-body">
+          <div class="block">
+            <span class="label"><span data-lang="es">Objetivo del proyecto</span><span data-lang="en" hidden>Project objective</span></span>
+            <p>
+              <span data-lang="es">Encontrar qué cocinar de un vistazo (por tiempo, dificultad, categoría) en vez de scrollear un Google Doc de texto plano.</span>
+              <span data-lang="en" hidden>Finding what to cook at a glance (by time, difficulty, category) instead of scrolling a plain-text Google Doc.</span>
+            </p>
+          </div>
+          <div class="block">
+            <span class="label"><span data-lang="es">¿De qué se trata?</span><span data-lang="en" hidden>What's it about?</span></span>
+            <p>
+              <span data-lang="es">Catálogo de recetas familiares (30 y sumando) con cards con foto, tiempo y dificultad, filtrables por categoría y ordenables por tiempo. El Google Doc original sigue siendo la fuente, sincronizada al sitio.</span>
+              <span data-lang="en" hidden>A catalog of family recipes (30 and counting) with cards showing photo, time and difficulty, filterable by category and sortable by time. The original Google Doc stays the source, synced into the site.</span>
+            </p>
+          </div>
+          <p class="line"><span class="label">Stack</span><span class="value">
+            <span data-lang="es">Python, JavaScript vanilla (SPA con hash routing), HTML/CSS, Google Docs (vía conector de Claude Code), pytest, Claude Code</span>
+            <span data-lang="en" hidden>Python, vanilla JavaScript (hash-routed SPA), HTML/CSS, Google Docs (via Claude Code connector), pytest, Claude Code</span>
+          </span></p>
+          <div class="block">
+            <span class="label"><span data-lang="es">Resultados</span><span data-lang="en" hidden>Results</span></span>
+            <ul>
+              <li><span data-lang="es">El Google Doc sigue siendo la fuente de verdad; un sync semi-automático lo convierte en recetas Markdown, detectando qué cambió de verdad para no revisar todo a mano cada vez</span><span data-lang="en" hidden>The Google Doc stays the source of truth; a semi-automated sync converts it into Markdown recipes, detecting what actually changed so not everything needs a manual re-check each time</span></li>
+              <li><span data-lang="es">Sub-recetas repetidas (masa sablée, crema pastelera) viven una sola vez como fragmentos compartidos e incluidos donde hacen falta, eliminando el problema de recetas duplicadas del Doc original</span><span data-lang="en" hidden>Sub-recipes that repeat (sablé dough, pastry cream) live once as shared fragments included wherever needed, solving the duplicate-recipe problem from the original Doc</span></li>
+              <li><span data-lang="es">Datos rotos frenan la publicación: el export valida cada receta y nunca pisa el sitio en línea con contenido inconsistente</span><span data-lang="en" hidden>Broken data halts publishing: the export validates every recipe and never overwrites the live site with inconsistent content</span></li>
+            </ul>
+          </div>
+          <div class="links">
+            <span class="url">nachomondino1.github.io</span>
+            <a href="https://github.com/nachomondino1/recetas" target="_blank" rel="noopener"><span data-lang="es">Ver código →</span><span data-lang="en" hidden>View code →</span></a>
+            <a href="https://nachomondino1.github.io/recetas/#/" target="_blank" rel="noopener"><span data-lang="es">Ver app →</span><span data-lang="en" hidden>View app →</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry" id="review-analysis">
+        <div class="entry-head">
+          <span class="index">08</span>
+          <div class="entry-head-main">
+            <div class="meta-row">
+              <span class="status live"><span data-lang="es">En línea</span><span data-lang="en" hidden>Live</span></span>
+              <span class="platform">GitHub Pages</span>
+            </div>
+            <h2>
+              <span data-lang="es">Análisis de Reseñas</span>
+              <span data-lang="en" hidden>Review Analysis</span>
+            </h2>
+          </div>
+        </div>
+        <div class="entry-body">
+          <div class="block">
+            <span class="label"><span data-lang="es">Objetivo del proyecto</span><span data-lang="en" hidden>Project objective</span></span>
+            <p>
+              <span data-lang="es">Convertir miles de reseñas sueltas de una app en hallazgos accionables y priorizados, sin tener que leerlas una por una.</span>
+              <span data-lang="en" hidden>Turning thousands of scattered app reviews into prioritized, actionable findings without reading them one by one.</span>
+            </p>
+          </div>
+          <div class="block">
+            <span class="label"><span data-lang="es">¿De qué se trata?</span><span data-lang="en" hidden>What's it about?</span></span>
+            <p>
+              <span data-lang="es">Pipeline que extrae reseñas de Google Play y App Store, las analiza (sentimiento + tópicos) y genera un dashboard autocontenido con los hallazgos ordenados por severidad, cada uno con recomendación y ejemplos reales.</span>
+              <span data-lang="en" hidden>A pipeline that pulls reviews from Google Play and the App Store, analyzes them (sentiment + topics) and generates a self-contained dashboard with findings ranked by severity, each with a recommendation and real examples.</span>
+            </p>
+          </div>
+          <p class="line"><span class="label">Stack</span><span class="value">
+            <span data-lang="es">Python, pysentimiento, BERTopic + sentence-transformers, HTML/CSS/JS, Claude Code</span>
+            <span data-lang="en" hidden>Python, pysentimiento, BERTopic + sentence-transformers, HTML/CSS/JS, Claude Code</span>
+          </span></p>
+          <div class="block">
+            <span class="label"><span data-lang="es">Resultados</span><span data-lang="en" hidden>Results</span></span>
+            <ul>
+              <li><span data-lang="es">Organizado en fases al estilo CRISP-DM (recolección → limpieza → modelado → evaluación → deployment), con una empresa nueva analizable solo pasando su id de tienda</span><span data-lang="en" hidden>Organized in CRISP-DM-style phases (collection → cleaning → modeling → evaluation → deployment), with a new company analyzable just by passing its store id</span></li>
+              <li><span data-lang="es">Fusión automática de tópicos casi idénticos (37 → 18 en un caso real) y detección de si una caída de reseñas negativas está atada a una versión específica, con test de significancia</span><span data-lang="en" hidden>Automatic merging of near-duplicate topics (37 → 18 in a real case) and detection of whether a spike in negative reviews ties to a specific app version, backed by a significance test</span></li>
+              <li><span data-lang="es">Dashboard final sin backend ni build: un HTML por empresa, listo para compartir por link</span><span data-lang="en" hidden>Final dashboard with no backend or build step: one HTML per company, ready to share via link</span></li>
+            </ul>
+          </div>
+          <div class="links">
+            <span class="url">nachomondino1.github.io</span>
+            <a href="https://github.com/nachomondino1/review_analysis" target="_blank" rel="noopener"><span data-lang="es">Ver código →</span><span data-lang="en" hidden>View code →</span></a>
+            <a href="https://nachomondino1.github.io/review_analysis" target="_blank" rel="noopener"><span data-lang="es">Ver dashboards →</span><span data-lang="en" hidden>View dashboards →</span></a>
+          </div>
+        </div>
+      </article>
+
+    </main>
+  </div>
+
+  <script src="site.js"></script>
+</body>
+</html>

@@ -28,30 +28,29 @@
   </script>
 </head>
 <body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">Nacho Mondino</a>
+      <nav class="topnav" aria-label="Principal">
+        <a href="proyectos.html"><span data-lang="es">Proyectos</span><span data-lang="en" hidden>Projects</span></a>
+        <a href="blog.html" aria-current="page"><span data-lang="es">Blog</span><span data-lang="en" hidden>Blog</span></a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang-btn="es">ES</button>
+        <button type="button" data-lang-btn="en">EN</button>
+      </div>
+    </div>
+  </header>
   <div class="layout">
     <aside class="sidebar">
       <div class="sidebar-inner">
         <div class="identity">
-          <p class="eyebrow">Nacho Mondino</p>
           <h1>Blog</h1>
           <p class="intro">
             <span data-lang="es">Notas que publico en LinkedIn, recopiladas acá.</span>
             <span data-lang="en" hidden>Notes I publish on LinkedIn, collected here. Posts are in Spanish.</span>
           </p>
-          <div class="lang-toggle" role="group" aria-label="Idioma / Language">
-            <button type="button" data-lang-btn="es">ES</button>
-            <button type="button" data-lang-btn="en">EN</button>
-          </div>
         </div>
-
-        <nav class="toc" aria-label="Índice de posts">
-          <ol>
-            <li><a href="#problemitas-con-datos" data-toc="problemitas-con-datos"><span class="n">Nov 26</span><span class="t">Problemitas del día a día, resueltos con datos</span></a></li>
-          </ol>
-        </nav>
-
-        <a class="side-link" href="index.html"><span data-lang="es">← Proyectos</span><span data-lang="en" hidden>← Projects</span></a>
-
         <p class="sidebar-foot">
           <span data-lang="es">Actualizado a mano, post por post.</span>
           <span data-lang="en" hidden>Updated by hand, one post at a time.</span>
@@ -60,36 +59,18 @@
     </aside>
 
     <main class="main">
-
-      <article class="entry post group-start" id="problemitas-con-datos">
-        <div class="entry-head">
-          <div class="entry-head-main">
-            <div class="meta-row">
-              <time datetime="2026-11-04">4 Nov 2026</time>
-            </div>
-            <h2>Problemitas del día a día, resueltos con datos</h2>
+      <div class="cards">
+        <a class="card" href="blog/problemitas-con-datos.html">
+          <div class="meta-row">
+            <span class="tag">Datos</span>
+            <time datetime="2026-11-04">4 Nov 2026</time>
+            <span>2 min</span>
           </div>
-        </div>
-        <div class="entry-body">
-          <div class="post-body" lang="es">
-            <p>Tengo notas de IMDB de cientos de películas y aun así termino <strong>20 minutos</strong> scrolleando Netflix sin elegir nada.</p>
-            <p>Me pasa seguido. Y pensé: lo que hago en el laburo (datos, ML, automatización) también sirve para los problemitas del día a día.</p>
-            <p>La idea es simple: agarrar algo que me molesta, <strong>resolverlo</strong> con datos y código, y contar cómo me fue.</p>
-            <p>Algunos que ya armé y voy a ir contando:</p>
-            <ul class="post-list">
-              <li>Tengo un montón de <strong>pelis</strong> en mi watchlist y así y todo pierdo varios minutos hasta elegir qué ver. Armé un modelo que aprende de mis notas de IMDb y predice qué nota le pondría a las que no vi.</li>
-              <li>Tengo un montón de <strong>juegos de mesa</strong> y nunca me acuerdo exactamente cuál va según cuántos somos y cuánto tiempo hay. Armé un catálogo de mi colección con filtros, un "¿Qué jugamos hoy?" y un "¿Cuál comprar?".</li>
-              <li>Las estadísticas de <strong>mi equipo</strong> de fútbol vivían en un Google Sheet. Muy poco accesible para visualizar. Armé un sitio web con las estadísticas que se publica automáticamente desde un Google Sheet donde cargo cada partido.</li>
-            </ul>
-            <p>Y van a aparecer proyectos nuevos a medida que me cruce con cosas para resolver.</p>
-            <p>En cada post: qué <strong>problema</strong> era, qué hice y qué aprendí. Voy a subir <strong>un proyecto por semana</strong>.</p>
-          </div>
-          <div class="links">
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7523444317441384449/" target="_blank" rel="noopener"><span data-lang="es">Ver post original en LinkedIn →</span><span data-lang="en" hidden>View original post on LinkedIn →</span></a>
-          </div>
-        </div>
-      </article>
-
+          <h2>Problemitas del día a día, resueltos con datos</h2>
+          <p>Un proyecto por semana: pelis, juegos de mesa y fútbol amateur resueltos con datos y código. Qué problema era, qué hice y qué aprendí.</p>
+          <span class="card-cta"><span data-lang="es">Leer →</span><span data-lang="en" hidden>Read →</span></span>
+        </a>
+      </div>
     </main>
   </div>
 
