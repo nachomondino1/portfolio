@@ -532,6 +532,14 @@ button:focus-visible {
   color: var(--accent);
 }
 
+.post-list.plain li {
+  padding-left: 0;
+}
+
+.post-list.plain li::before {
+  content: none;
+}
+
 .empty {
   margin: 0;
   color: var(--ink-muted);

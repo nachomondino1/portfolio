@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Quise hacer un recomendador de películas. Lo que aprendí es por qué no conviene. · Ignacio Mondino</title>
+  <meta name="description" content="Tres versiones de un recomendador de películas y por qué lo cerré: qué aprendí sobre cuándo un proyecto de datos tiene sentido.">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nachomondino1.github.io/portfolio/blog/recomendador-de-peliculas.html">
+  <meta property="og:title" content="Quise hacer un recomendador de películas. Lo que aprendí es por qué no conviene.">
+  <meta property="og:description" content="Tres versiones de un recomendador de películas y por qué lo cerré: qué aprendí sobre cuándo un proyecto de datos tiene sentido.">
+  <meta property="og:image" content="https://nachomondino1.github.io/portfolio/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quise hacer un recomendador de películas. Lo que aprendí es por qué no conviene.">
+  <meta name="twitter:description" content="Tres versiones de un recomendador de películas y por qué lo cerré: qué aprendí sobre cuándo un proyecto de datos tiene sentido.">
+  <meta name="twitter:image" content="https://nachomondino1.github.io/portfolio/og-image.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    try {
+      if (localStorage.getItem("ficheroLang") === "en") document.documentElement.setAttribute("lang", "en");
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">Nacho Mondino</a>
+      <nav class="topnav" aria-label="Principal">
+        <a href="../proyectos.html"><span data-lang="es">Proyectos</span><span data-lang="en" hidden>Projects</span></a>
+        <a href="../blog.html" aria-current="page"><span data-lang="es">Blog</span><span data-lang="en" hidden>Blog</span></a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang-btn="es">ES</button>
+        <button type="button" data-lang-btn="en">EN</button>
+      </div>
+    </div>
+  </header>
+  <main class="article-page">
+    <a class="back" href="../blog.html"><span data-lang="es">← Todos los posts</span><span data-lang="en" hidden>← All posts</span></a>
+    <article class="post">
+      <div class="meta-row">
+        <span class="tag">Datos</span>
+        <time datetime="2026-11-13">13 Nov 2026</time>
+        <span>3 min</span>
+      </div>
+      <h1>Quise hacer un recomendador de películas. Lo que aprendí es por qué no conviene.</h1>
+      <p class="en-note" data-lang="en" hidden>This post is in Spanish.</p>
+      <div class="post-body" lang="es">
+            <p>Hace unos meses empecé un proyecto para predecir qué nota le pondría yo a una película que no vi. Tres versiones después, lo cerré. Esto es lo que pasó 👇</p>
+            <p>🔎 <strong>v1: filtrar la base de IMDb por mis plataformas</strong><br>Era lo más simple: tomar el catálogo de IMDb y mostrar solo lo que está en mis servicios de streaming (e.g. Netflix, Prime, etc). Funcionaba, pero no lo usaba. JustWatch hace exactamente eso, con un catálogo más amplio y actualizado, y es más cómodo. Si ya existe algo mejor, no tiene sentido ofrecer lo mío.</p>
+            <p>🤖 <strong>v2: predecir mi nota</strong><br>Ahí vino la idea real: entrenar un modelo con las películas que ya puntué en IMDb para predecir mi nota en las que no vi. Dos hallazgos:</p>
+            <ul class="post-list plain">
+              <li>📉 Tenía solo 126 registros, y eso que vi muchas películas y series. Con tan pocos datos, ninguna conclusión es robusta.</li>
+              <li>🎯 El mejor predictor que encontré fue el más simple: la nota de IMDb más mi desvío promedio, que en mi caso es de casi 1,5 puntos. Ningún modelo con tan poca muestra lo superó significativamente.</li>
+            </ul>
+            <p>Conclusión: un recomendador personal necesita muchas notas propias, y casi nadie las tiene. Por eso descarté el proyecto.</p>
+            <p>📊 <strong>v3: ¿qué hace que una película tenga buena nota?</strong><br>Si mi muestra era chica, la pregunta tenía que cambiar. Con varios miles de películas de TMDB, hice un análisis exploratorio: qué géneros, elencos, duraciones y otras características se asocian con notas más altas o más bajas.</p>
+            <p>⚠️ Ojo con lo que esto no dice: es correlación, no causa. Que las ventas de helado y los ahogamientos suban juntos no significa que haya que dejar de vender helados 🍦: ambos dependen del calor ☀️. Del mismo modo, una película con todas las características “ganadoras” no tiene garantizada una nota alta. Es exploración, no una receta.</p>
+            <p>💡 <strong>Lo que me llevo del proyecto</strong></p>
+            <ul class="post-list plain">
+              <li>🧭 Antes de construir, fijate si el problema existe y si ya hay algo mejor (v1).</li>
+              <li>📏 Un modelo personal sin datos suficientes no le gana a una referencia simple (v2).</li>
+              <li>🔄 Cuando los datos propios no alcanzan, cambiar la pregunta a una que sí se pueda responder puede ser más útil que forzar el modelo (v3).</li>
+            </ul>
+            <p>No terminó siendo un producto, pero sí un buen recorrido para entender cuándo un proyecto de datos tiene sentido y cuándo no. 🙌</p>
+          </div>
+      <div class="links">
+            <a href="https://lnkd.in/dJXWG9bm" target="_blank" rel="noopener"><span data-lang="es">Ver el proyecto completo →</span><span data-lang="en" hidden>See the full project →</span></a>
+            <a href="https://lnkd.in/p/d5mtVetz" target="_blank" rel="noopener"><span data-lang="es">Ver post original en LinkedIn →</span><span data-lang="en" hidden>View original post on LinkedIn →</span></a>
+          </div>
+    </article>
+  </main>
+
+  <script src="../site.js"></script>
+</body>
+</html>
