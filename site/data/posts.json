@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "projects": {
+    "alera": { "es": "Alera", "en": "Alera" },
+    "apuestas": { "es": "Predictor de Apuestas", "en": "Sports Betting Predictor" },
+    "alternativas": { "es": "Evaluación de Alternativas", "en": "Alternatives Evaluator" },
+    "buitres": { "es": "Estadísticas de Fútbol Amateur", "en": "Amateur Football Stats" },
+    "peliculas": { "es": "Recomendador de Películas", "en": "Movie Recommender" },
+    "juegos": { "es": "Juegos de Mesa", "en": "Board Games" },
+    "recetas": { "es": "Recetas", "en": "Recipes" },
+    "review-analysis": { "es": "Análisis de Reseñas", "en": "Review Analysis" }
+  },
+  "posts": [
+    {
+      "slug": "problemitas-con-datos",
+      "date": "2026-11-04",
+      "tag": "Datos",
+      "minutes": 2,
+      "title": "Problemitas del día a día, resueltos con datos",
+      "short": "Introducción",
+      "summary": "Un proyecto por semana: pelis, juegos de mesa y fútbol amateur resueltos con datos y código. Qué problema era, qué hice y qué aprendí.",
+      "project": null
+    },
+    {
+      "slug": "recomendador-de-peliculas",
+      "date": "2026-11-13",
+      "tag": "Datos",
+      "minutes": 3,
+      "title": "Quise hacer un recomendador de películas. Lo que aprendí es por qué no conviene.",
+      "short": "Por qué lo cerré",
+      "summary": "Tres versiones de un recomendador de películas y por qué lo cerré: qué aprendí sobre cuándo un proyecto de datos tiene sentido.",
+      "project": "peliculas"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+name: test-and-deploy
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: make test
+  deploy:
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    environment: github-pages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+      - uses: actions/deploy-pages@v4

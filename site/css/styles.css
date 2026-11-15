@@ -540,6 +540,58 @@ button:focus-visible {
   content: none;
 }
 
+.tips {
+  margin: 2em 0;
+}
+
+.post-body .tips-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+}
+
+.tips ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.tip {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 18px 20px;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  background: var(--accent-soft);
+}
+
+.tip-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.tip-n {
+  display: block;
+  margin-bottom: 4px;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.post-body .tip p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 .empty {
   margin: 0;
   color: var(--ink-muted);
@@ -565,6 +617,39 @@ button:focus-visible {
 .card:focus-visible {
   border-color: var(--accent);
   transform: translateY(-2px);
+}
+
+.card-wrap {
+  position: relative;
+}
+
+.card-wrap.has-chip .card {
+  padding-bottom: 56px;
+}
+
+.card-wrap .project-chip {
+  position: absolute;
+  right: 22px;
+  bottom: 18px;
+}
+
+.project-chip {
+  display: inline-block;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+
+.project-chip:hover,
+.project-chip:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.article-page .project-chip {
+  margin-bottom: 14px;
 }
 
 .card h2 {
@@ -603,11 +688,16 @@ button:focus-visible {
 }
 
 .hero {
+  min-height: calc(100vh - 56px);
+  min-height: calc(100svh - 56px);
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid var(--rule);
   background: radial-gradient(ellipse at 80% 0%, var(--accent-soft), transparent 60%);
 }
 
 .hero-inner {
+  width: 100%;
   max-width: 1180px;
   margin: 0 auto;
   padding: 72px 32px;
@@ -687,6 +777,10 @@ button:focus-visible {
 }
 
 @media (max-width: 800px) {
+  .hero {
+    min-height: 0;
+  }
+
   .hero-inner {
     grid-template-columns: minmax(0, 1fr);
     padding: 40px 20px;
@@ -720,13 +814,26 @@ button:focus-visible {
 }
 
 .home h2 {
-  font-size: 0.72rem;
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  font-weight: 500;
-  margin: 0 0 16px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  color: var(--ink);
+  margin: 0 0 18px;
+}
+
+.home h2::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--accent);
+  margin-bottom: 14px;
+}
+
+.home .card h2::before {
+  content: none;
 }
 
 .home .card h2 {
@@ -745,7 +852,7 @@ button:focus-visible {
 }
 
 .home .cards {
-  margin-top: 56px;
+  margin-top: 0;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -857,3 +964,5 @@ button:focus-visible {
 [hidden]:not([hidden="until-found"]) {
   display: none !important;
 }
+
+.load-error { color: var(--muted, #666); padding: 1rem 0; }
