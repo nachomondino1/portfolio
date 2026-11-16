@@ -465,32 +465,57 @@ button:focus-visible {
 .links {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 18px;
+  gap: 10px;
   margin-top: 28px;
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 0.74rem;
+  font-size: 0.82rem;
 }
 
-.url {
-  color: var(--ink-faint);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 220px;
-}
-
-.links a {
-  color: var(--accent);
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  color: var(--ink);
   text-decoration: none;
   font-weight: 500;
   white-space: nowrap;
-  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s;
 }
 
-.links a:hover,
-.links a:focus-visible {
-  border-bottom-color: var(--accent);
+.btn .ico {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: none;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+.btn.primary:hover,
+.btn.primary:focus-visible {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn.ghost {
+  border-style: dashed;
+  color: var(--ink-muted);
 }
 
 .post .entry-body {
@@ -952,12 +977,7 @@ button:focus-visible {
   }
 
   .links {
-    gap: 6px 14px;
-  }
-
-  .url {
-    flex-basis: 100%;
-    max-width: 100%;
+    gap: 8px;
   }
 }
 
