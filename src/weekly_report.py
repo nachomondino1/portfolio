@@ -34,6 +34,9 @@ def fetch_total(code, start, end, token):
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
             return json.load(r)["total"]
+    except urllib.error.HTTPError as e:
+        print(f"WARNING {code}: HTTP {e.code} {e.read().decode()[:300]}", file=sys.stderr)
+        return None
     except (urllib.error.URLError, KeyError, ValueError) as e:
         print(f"WARNING {code}: {e}", file=sys.stderr)
         return None
