@@ -1,3 +1,14 @@
+// Analytics: GoatCounter (sin cookies). No cuenta visitas en localhost.
+(function () {
+  var h = location.hostname;
+  if (h === "localhost" || h === "127.0.0.1" || h === "") return;
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "//gc.zgo.at/count.js";
+  s.setAttribute("data-goatcounter", "https://portafolio-proyectos.goatcounter.com/count");
+  document.head.appendChild(s);
+})();
+
 (function () {
   function applyLang(lang) {
     document.querySelectorAll("[data-lang]").forEach(function (el) {
