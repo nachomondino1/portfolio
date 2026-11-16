@@ -18,12 +18,17 @@ make check   # solo la validación (ERROR/WARNING)
 make help    # lista de comandos y flujo habitual
 ```
 
+```bash
+make report  # reporte de tráfico de todos los proyectos (necesita GOATCOUNTER_TOKEN)
+```
+
 Desplegar: `git push` a `main`. El workflow corre `make test` y publica `site/` en GitHub Pages.
 Primer deploy: Settings → Pages → Source = **GitHub Actions**.
 
 ## Analytics
 
 Tráfico medido con [GoatCounter](https://portafolio-proyectos.goatcounter.com/) (sin cookies). El snippet vive en `site/js/site.js` y no corre en localhost.
+Cada lunes, el workflow `weekly-report` manda por mail un reporte unificado de todos los proyectos (`src/weekly_report.py`). Secrets del repo: `GOATCOUNTER_TOKEN`, `RESEND_API_KEY` (clave de solo envío), `REPORT_TO`.
 
 ## Qué es
 
